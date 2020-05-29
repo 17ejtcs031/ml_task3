@@ -33,7 +33,7 @@ def dense3():
     return (Dense(units=32, activation='relu'))
 
 def dense4():
-    return (Dense(units=1, activation='relu'))
+    return (Dense(units=1, activation='softmax'))
 
 model=Sequential()
 
@@ -72,7 +72,7 @@ else:
     model.add(dense2())
     model.add(dense3())
 model.add(dense4())
-model.add(Softmax())
+
 
 print(model.summary())
 model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['accuracy'])
