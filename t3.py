@@ -90,7 +90,7 @@ training_set = train_datagen.flow_from_directory(
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        'cnn_dataset/test_set/',
+        '/root/ws/cnn_dataset/test_set/',
         target_size=(128, 128),
         batch_size=32,
         class_mode='binary')
