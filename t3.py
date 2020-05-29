@@ -85,7 +85,7 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        'cnn_dataset/training_set/',
+        '/root/ws/cnn_dataset/training_set/',
         target_size=(128, 128),
         batch_size=32,
         class_mode='binary')
