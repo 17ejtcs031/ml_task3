@@ -106,7 +106,7 @@ print(max(history.history['accuracy']))
 if (max(history.history['accuracy'])) > .80 :
     model.save('model.h5')
 
-fp = open('/root/task3/accuracy.txt','w+')
+fp = open('/root/ws/accuracy.txt','w+')
 fp.write (str(history.history['accuracy']))
 fp.close()
 
