@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-#coding: utf-8
-
 from keras.layers import Convolution2D
 from keras.layers import MaxPooling2D
 from keras.layers import Flatten
