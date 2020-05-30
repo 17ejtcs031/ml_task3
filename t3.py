@@ -39,7 +39,7 @@ model=Sequential()
 
 model.add(conv1())
 model.add(max1())
-X = random.randint(1,5)
+X = 5
 if X==1:
     model.add(conv2())
     model.add(max1())
