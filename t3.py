@@ -98,7 +98,7 @@ test_set = test_datagen.flow_from_directory(
 history=model.fit(
         training_set,
         steps_per_epoch=300,
-        epochs=15,
+        epochs=20,
         validation_data=test_set,
         validation_steps=80,)
 
