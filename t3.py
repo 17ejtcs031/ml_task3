@@ -12,7 +12,7 @@ def conv1():
     return (Convolution2D(filters=random.randint(30,50), 
                         kernel_size=(3,3), 
                         activation='relu',
-                   input_shape=(128, 128, 3)
+                   input_shape=(64,64, 3)
                        ))
 
 def conv2():
@@ -33,7 +33,7 @@ def dense3():
     return (Dense(units=32, activation='relu'))
 
 def dense4():
-    return (Dense(units=1, activation='softmax'))
+    return (Dense(units=1, activation='sigmoid'))
 
 model=Sequential()
 
@@ -86,12 +86,12 @@ train_datagen = ImageDataGenerator(
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
         '/root/ws/cnn_dataset/training_set/',
-        target_size=(128, 128),
+        target_size=(64,64),
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
         '/root/ws/cnn_dataset/test_set/',
-        target_size=(128, 128),
+        target_size=(64,64),
         batch_size=32,
         class_mode='binary')
 
